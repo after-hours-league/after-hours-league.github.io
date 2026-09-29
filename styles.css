@@ -1,19 +1,9 @@
-:root { color-scheme: dark; background: #000; font-family: Arial, Helvetica, sans-serif; }
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+:root { color-scheme: dark; background: #000; font-family: Arial, sans-serif; }
 * { box-sizing: border-box; }
 html, body { margin: 0; min-height: 100%; background: #000; }
-body { overflow-x: hidden; }
-main { min-height: 100svh; display: grid; place-items: center; padding: 32px 20px 76px; }
-.logo-stage { width: min(780px, 88vw, 88svh);  }
-.logo { display: block; width: 100%; height: auto; user-select: none; object-fit: contain; max-height: 82svh; background: #000; }
-.motion-toggle { position: fixed; bottom: max(22px, env(safe-area-inset-bottom)); right: max(24px, env(safe-area-inset-right)); display: inline-flex; gap: 9px; align-items: center; min-height: 44px; padding: 8px 12px; color: #858585; border: 1px solid #242424; border-radius: 999px; background: #000; cursor: pointer; font: 12px/1.4 Arial, sans-serif; transition: color .2s, border-color .2s; }
-.motion-toggle:hover { color: #fff; border-color: #777; }
-.motion-toggle:focus-visible { outline: 2px solid #fff; outline-offset: 5px; }
-.play-icon { display: none; }
-.paused .logo, .paused .logo-stage { animation-play-state: paused; }
-.paused .pause-icon { display: none; }
-.paused .play-icon { display: block; }
-@keyframes arrive { from { opacity: 0; transform: translateY(14px) scale(.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
-@keyframes float { 0%, 100% { transform: translateY(6px) scale(.985); } 50% { transform: translateY(-8px) scale(1.015); } }
-@keyframes light { 0%, 100% { filter: contrast(1.12) brightness(.88); } 50% { filter: contrast(1.12) brightness(1.12); } }
-@media (max-width: 600px) { main { padding-inline: 12px; } .logo-stage { width: min(96vw, 82svh); } }
-@media (prefers-reduced-motion: reduce) { .logo, .logo-stage { animation: none; }  }
+main { min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px 20px 56px; gap: 0; }
+.logo-stage { width: min(480px, 78vw, 66svh); }
+.logo { display: block; width: 100%; height: auto; user-select: none; }
+h1 { margin: -20px 0 0; padding-left: .28em; color: #f1f0e9; font-family: 'Orbitron', 'Arial Black', sans-serif; font-size: clamp(18px, 3.8vw, 26px); font-weight: 700; line-height: 1.5; letter-spacing: .28em; text-transform: uppercase; text-align: center; }
+@media (max-width: 480px) { main { padding-inline: 16px; } h1 { margin-top: 0; } }
