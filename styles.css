@@ -3,8 +3,8 @@
 html, body { margin: 0; min-height: 100%; background: #000; }
 body { overflow-x: hidden; }
 main { min-height: 100svh; display: grid; place-items: center; padding: 32px 20px 76px; }
-.logo-stage { width: min(780px, 88vw, 88svh); animation: arrive 1.6s cubic-bezier(.2,.7,.2,1) both; }
-.logo { display: block; width: 100%; height: auto; user-select: none; filter: contrast(1.12); animation: float 7s ease-in-out infinite, light 7s ease-in-out infinite; }
+.logo-stage { width: min(780px, 88vw, 88svh);  }
+.logo { display: block; width: 100%; height: auto; user-select: none; object-fit: contain; max-height: 82svh; background: #000; }
 .motion-toggle { position: fixed; bottom: max(22px, env(safe-area-inset-bottom)); right: max(24px, env(safe-area-inset-right)); display: inline-flex; gap: 9px; align-items: center; min-height: 44px; padding: 8px 12px; color: #858585; border: 1px solid #242424; border-radius: 999px; background: #000; cursor: pointer; font: 12px/1.4 Arial, sans-serif; transition: color .2s, border-color .2s; }
 .motion-toggle:hover { color: #fff; border-color: #777; }
 .motion-toggle:focus-visible { outline: 2px solid #fff; outline-offset: 5px; }
@@ -16,4 +16,4 @@ main { min-height: 100svh; display: grid; place-items: center; padding: 32px 20p
 @keyframes float { 0%, 100% { transform: translateY(6px) scale(.985); } 50% { transform: translateY(-8px) scale(1.015); } }
 @keyframes light { 0%, 100% { filter: contrast(1.12) brightness(.88); } 50% { filter: contrast(1.12) brightness(1.12); } }
 @media (max-width: 600px) { main { padding-inline: 12px; } .logo-stage { width: min(96vw, 82svh); } }
-@media (prefers-reduced-motion: reduce) { .logo, .logo-stage { animation: none; } .motion-toggle { display: none; } }
+@media (prefers-reduced-motion: reduce) { .logo, .logo-stage { animation: none; }  }
