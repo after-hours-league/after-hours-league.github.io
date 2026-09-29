@@ -12,9 +12,11 @@
 <body>
   <main aria-label="After Hours League">
     <div class="logo-stage">
-      <video class="logo" muted loop playsinline preload="auto" poster="after-hours-logo.png" aria-label="After Hours League logo animation"><source src="league-animation.mp4" type="video/mp4"></video>
+      <picture>
+        <source media="(prefers-reduced-motion: reduce)" srcset="after-hours-logo.png">
+        <img class="logo" src="league-animation.gif" width="720" height="720" alt="After Hours League" fetchpriority="high">
+      </picture>
     </div>
   </main>
-  <script src="script.js?v=3"></script>
 </body>
 </html>
